@@ -156,6 +156,12 @@ main { display: block; }
   margin: 10px 0 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  /* Leaflet's own layers (tiles, markers, zoom controls) use z-index up to
+     1000 internally. Without this, the container never forms its own
+     stacking context, so those layers escape and paint over later page
+     elements — including the detail sheet, which only sits at z-index 50. */
+  position: relative;
+  z-index: 0;
 }
 .map-fallback {
   display: flex;
