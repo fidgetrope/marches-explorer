@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marches Explorer</title>
+<meta name="description" content="Ancient monuments and underlying geology of Shropshire and the Welsh Marches.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%9A%A9</text></svg>">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">🪨</span>
+    <span class="brand-text">Marches Explorer</span>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button class="tab-btn active" data-tab="sites" role="tab" aria-selected="true">Sites</button>
+    <button class="tab-btn" data-tab="geology" role="tab" aria-selected="false">Geology</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============================ SITES TAB ============================ -->
+  <section id="tab-sites" class="tab-panel active">
+
+    <div class="controls">
+      <button id="locate-btn" class="btn btn-primary">📍 Use my location</button>
+      <div class="search-wrap">
+        <input id="search-input" type="text" placeholder="Search sites, periods, places…" autocomplete="off">
+        <button id="search-clear" class="btn-clear" hidden>✕</button>
+      </div>
+    </div>
+
+    <div id="status-line" class="status-line" hidden></div>
+
+    <div id="map" class="map"></div>
+
+    <div class="list-wrap">
+      <h2 class="list-heading">Curated sites <span id="site-count" class="count-badge"></span></h2>
+      <ul id="site-list" class="site-list"></ul>
+    </div>
+
+    <div id="live-wrap" class="list-wrap live-wrap" hidden>
+      <h2 class="list-heading">Also nearby, via Wikipedia <span class="count-badge live-badge">live · unverified</span></h2>
+      <p class="live-note">Pulled live from Wikipedia's geosearch for wherever you've located — not curated, not necessarily archaeology. Worth a look if you're stood somewhere with nothing in the curated list above.</p>
+      <ul id="live-list" class="site-list live-list"></ul>
+    </div>
+
+  </section>
+
+  <!-- =========================== GEOLOGY TAB ============================ -->
+  <section id="tab-geology" class="tab-panel">
+
+    <div class="geology-intro">
+      <h2>What's under your feet</h2>
+      <p>Shropshire and the Marches pack an unusual amount of deep time into a small area — from 680-million-year-old volcanic rock on the Wrekin to Ice Age boulder clay in the valleys. The regions below are written up by outcrop; the timescale further down lets you place any of them, or any period at all, in context.</p>
+    </div>
+
+    <div id="geology-regions" class="geology-regions"></div>
+
+    <div class="timescale-wrap">
+      <h2>Geological time scale</h2>
+      <p class="timescale-note">Tap an eon to open its eras and periods. Local rock is flagged with 📍 where this stretch of the Marches has something from that slice of time exposed at the surface.</p>
+      <div id="timescale" class="timescale"></div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ============================ DETAIL SHEET ============================ -->
+<div id="sheet-backdrop" class="sheet-backdrop" hidden></div>
+<div id="detail-sheet" class="detail-sheet" hidden aria-hidden="true">
+  <button id="sheet-close" class="sheet-close" aria-label="Close">✕</button>
+  <div id="sheet-content" class="sheet-content"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+:root {
+  --bg: #f5f1e9;
+  --surface: #ffffff;
+  --surface-2: #efe8db;
+  --text: #2b2420;
+  --text-dim: #6b6055;
+  --border: #ddd3c2;
+  --primary: #a8502f;
+  --primary-dim: #c97b5a;
+  --moss: #5c7a5c;
+  --stone: #8a8478;
+  --neolithic: #5c7a5c;
+  --bronze: #a8752f;
+  --iron: #7a5c8a;
+  --mixed: #a8502f;
+  --shadow: 0 4px 18px rgba(43, 36, 32, 0.14);
+  --radius: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #18140f;
+    --surface: #241e17;
+    --surface-2: #2c251c;
+    --text: #ede4d6;
+    --text-dim: #b4a894;
+    --border: #3a3226;
+    --primary: #d97b5a;
+    --primary-dim: #b5563a;
+    --moss: #83a583;
+    --bronze: #d3a35f;
+    --iron: #b79bcb;
+    --mixed: #d97b5a;
+    --shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body { overflow-x: hidden; padding-bottom: env(safe-area-inset-bottom); }
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; margin: 0 0 0.4em; }
+p { line-height: 1.5; margin: 0 0 0.8em; }
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 14px calc(10px + env(safe-area-inset-top)) 14px;
+  padding-top: max(10px, env(safe-area-inset-top));
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+.brand-mark { font-size: 1.3rem; }
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 4px;
+}
+.tab-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 9px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.tab-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+main { display: block; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px 6px;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:active { background: var(--primary-dim); }
+
+.search-wrap { position: relative; }
+#search-input {
+  width: 100%;
+  padding: 11px 36px 11px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+.btn-clear {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 1rem;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.status-line {
+  margin: 4px 14px 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.map {
+  height: 42vh;
+  min-height: 260px;
+  margin: 10px 0 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.map-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  background: var(--surface-2);
+}
+
+.list-wrap { padding: 14px; }
+.list-heading {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.count-badge {
+  font-family: -apple-system, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+.live-badge { color: var(--primary); }
+.live-note { font-size: 0.85rem; color: var(--text-dim); margin-top: -4px; }
+
+.site-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+
+.site-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.site-card:active { background: var(--surface-2); }
+
+.period-dot {
+  width: 11px; height: 11px; border-radius: 50%;
+  margin-top: 5px; flex: none;
+}
+.dot-neolithic, .dot-Neolithic { background: var(--neolithic); }
+.dot-bronze { background: var(--bronze); }
+.dot-iron { background: var(--iron); }
+.dot-mixed { background: var(--mixed); }
+
+.site-card-body { flex: 1; min-width: 0; }
+.site-card-title { font-weight: 700; font-size: 0.98rem; }
+.site-card-meta { font-size: 0.82rem; color: var(--text-dim); margin-top: 2px; }
+.site-card-dist { font-size: 0.78rem; color: var(--primary); font-weight: 600; margin-top: 3px; }
+
+.empty-note { color: var(--text-dim); font-size: 0.9rem; padding: 10px 4px; }
+
+/* ---------- Geology tab ---------- */
+.geology-intro { padding: 16px 16px 4px; }
+.geology-intro p { color: var(--text-dim); font-size: 0.92rem; }
+
+.geology-regions { padding: 6px 14px; display: flex; flex-direction: column; gap: 10px; }
+.geo-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.geo-card-head {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  padding: 14px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.geo-card-name { font-weight: 700; font-size: 1rem; font-family: Georgia, serif; }
+.geo-card-tag { font-size: 0.8rem; color: var(--primary); font-weight: 600; }
+.geo-card-body { display: none; padding: 0 14px 14px; }
+.geo-card.open .geo-card-body { display: block; }
+.geo-card-body p { font-size: 0.9rem; color: var(--text); }
+.geo-card-detail { color: var(--text-dim) !important; font-size: 0.87rem !important; }
+.geo-linked { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.geo-link-chip {
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  color: var(--text);
+}
+
+.timescale-wrap { padding: 6px 14px 40px; }
+.timescale-note { font-size: 0.85rem; color: var(--text-dim); }
+
+.eon-bar {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 46px;
+  margin: 10px 0 14px;
+  border: 1px solid var(--border);
+}
+.eon-seg {
+  border: none;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  text-align: center;
+  line-height: 1.1;
+}
+.eon-seg.active { outline: 3px solid var(--primary); outline-offset: -3px; }
+
+.eon-detail { display: none; margin-bottom: 18px; }
+.eon-detail.open { display: block; }
+.eon-detail-blurb { font-size: 0.88rem; color: var(--text-dim); margin-bottom: 10px; }
+.eon-detail-local {
+  font-size: 0.85rem;
+  background: var(--surface-2);
+  border-left: 3px solid var(--primary);
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.era-block { margin-bottom: 10px; }
+.era-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  font-weight: 700;
+  margin: 10px 0 6px;
+}
+
+.period-row {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+.period-row-head {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+.period-row-name { font-weight: 700; }
+.period-row-span { font-size: 0.78rem; color: var(--text-dim); white-space: nowrap; }
+.period-row-pin { color: var(--primary); }
+.period-row-body { display: none; padding: 0 12px 12px; }
+.period-row.open .period-row-body { display: block; }
+.period-row-body p { font-size: 0.85rem; margin: 0 0 6px; }
+.period-row-local {
+  font-size: 0.82rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ---------- Detail sheet ---------- */
+.sheet-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 40;
+}
+.detail-sheet {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  max-height: 86vh;
+  background: var(--surface);
+  border-radius: 18px 18px 0 0;
+  box-shadow: var(--shadow);
+  z-index: 50;
+  overflow-y: auto;
+  padding: 18px 18px calc(24px + env(safe-area-inset-bottom));
+  animation: sheet-up 0.18s ease-out;
+}
+@keyframes sheet-up {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.sheet-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  border: none;
+  background: var(--surface-2);
+  color: var(--text);
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.sheet-content { clear: both; }
+.sheet-title { font-family: Georgia, serif; font-size: 1.3rem; font-weight: 700; margin: 4px 0 2px; }
+.sheet-meta { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 12px; }
+.sheet-section-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--primary); font-weight: 700; margin: 14px 0 4px; }
+.sheet-content p { font-size: 0.94rem; }
+.sheet-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.sheet-link {
+  font-size: 0.85rem;
+  text-decoration: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.sheet-dist {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--moss);
+}
+
+@media (min-width: 720px) {
+  .detail-sheet { left: 50%; right: auto; width: 480px; transform: translateX(-50%); border-radius: 18px; bottom: 30px; max-height: 80vh; }
+  @keyframes sheet-up { from { transform: translate(-50%, 16px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
+}
