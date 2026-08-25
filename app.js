@@ -140,10 +140,10 @@
   }
 
   const dotColor = {
-    neolithic: "#5c7a5c",
-    bronze: "#a8752f",
-    iron: "#7a5c8a",
-    mixed: "#a8502f"
+    neolithic: "#0057ff",
+    bronze: "#e8e315",
+    iron: "#e2007a",
+    mixed: "#0a0a0a"
   };
 
   function renderMarkers() {
@@ -166,11 +166,13 @@
 
   // ---------------------------------------------------------------- lists
 
+  const PERIOD_LABEL = { neolithic: "Neo", bronze: "Bronze", iron: "Iron", mixed: "Mixed" };
+
   function siteCardHtml(site, dist) {
     const cls = periodClass(site.period);
     return `
       <li class="site-card" data-id="${site.id}">
-        <span class="period-dot dot-${cls}"></span>
+        <span class="period-dot dot-${cls}">${PERIOD_LABEL[cls]}</span>
         <span class="site-card-body">
           <span class="site-card-title">${site.name}</span>
           <div class="site-card-meta">${site.period} &middot; ${site.dates}</div>
@@ -300,7 +302,7 @@
           L.marker([userLoc.lat, userLoc.lon], {
             icon: L.divIcon({
               className: "",
-              html: `<div style="width:16px;height:16px;border-radius:50%;background:#2b7fff;border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.5)"></div>`,
+              html: `<div style="width:16px;height:16px;border-radius:50%;background:#e2007a;border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.5)"></div>`,
               iconSize: [16, 16],
               iconAnchor: [8, 8]
             })
@@ -382,8 +384,10 @@
   }
 
   function liveCardHtml(item) {
+    const bg = item.isLandscape ? "var(--blue)" : "#888";
+    const label = item.isLandscape ? "geo" : "wiki";
     return `<li class="site-card live-card" data-title="${item.title.replace(/"/g, "&quot;")}">
-      <span class="period-dot" style="background:${item.isLandscape ? "var(--moss)" : "#888"}"></span>
+      <span class="period-dot" style="background:${bg};color:#fff">${label}</span>
       <span class="site-card-body">
         <span class="site-card-title">${item.title}</span>
         <div class="site-card-dist">${fmtDist(item.dist)}</div>
@@ -474,10 +478,16 @@
   }
 
   const EON_COLORS = {
-    Hadean: "#4a3f36",
-    Archean: "#6b4f3a",
-    Proterozoic: "#7a5c3a",
-    Phanerozoic: "#a8502f"
+    Hadean: "#0a0a0a",
+    Archean: "#333333",
+    Proterozoic: "#0057ff",
+    Phanerozoic: "#e8e315"
+  };
+  const EON_TEXT_COLORS = {
+    Hadean: "#fff",
+    Archean: "#fff",
+    Proterozoic: "#fff",
+    Phanerozoic: "#0a0a0a"
   };
 
   function renderTimescale() {
@@ -491,6 +501,7 @@
       seg.className = "eon-seg";
       seg.style.width = Math.max(widthPct, 6) + "%";
       seg.style.background = EON_COLORS[eon.eon] || "#888";
+      seg.style.color = EON_TEXT_COLORS[eon.eon] || "#fff";
       seg.textContent = eon.eon;
       seg.dataset.eon = eon.eon;
       bar.appendChild(seg);
