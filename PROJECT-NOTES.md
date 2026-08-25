@@ -8,9 +8,10 @@ everything it needs to make a tweak and push it live.
 
 A mobile-first web app with three tabs:
 
-- **Sites** — a curated database of 33 Neolithic/Bronze Age/Iron Age
-  monuments across Shropshire and the Welsh Marches, each with a sourced
-  write-up. Has GPS "use my location" (sorts by distance).
+- **Sites** — a curated database of 40 Neolithic/Bronze Age/Iron Age
+  monuments across Shropshire, the Welsh Marches, and the Cotswold
+  escarpment around Shurdington/Cheltenham, Gloucestershire, each with a
+  sourced write-up. Has GPS "use my location" (sorts by distance).
 - **Other sites** — the live Wikipedia geosearch layer for anywhere not in
   the curated list, with an "All" / "Landscape & geology" filter (the
   latter classified from each result's Wikipedia categories) so open
