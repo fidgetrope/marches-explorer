@@ -37,6 +37,66 @@
   let userLoc = null; // {lat, lon}
   let map, markerLayer;
   const markerById = {};
+  let liveResults = []; // last fetched Wikipedia geosearch results, classified
+  let liveFilter = "all"; // "all" | "landscape"
+
+  // Wikipedia category names (with "Category:" stripped) that mark a page
+  // as a landscape/geological feature rather than a building, settlement,
+  // or other man-made thing. Matched with .some(), so one hit is enough.
+  const LANDSCAPE_CATEGORY_PATTERNS = [
+    /geology/i,
+    /geological/i,
+    /geomorphology/i,
+    /landform/i,
+    /\bhills? of\b/i,
+    /\bmountains? of\b/i,
+    /\bvalleys? of\b/i,
+    /\brivers? of\b/i,
+    /\bstreams? of\b/i,
+    /\blakes? of\b/i,
+    /reservoirs? in/i,
+    /sites of special scientific interest/i,
+    /national nature reserves?/i,
+    /nature reserves? (in|of)/i,
+    /areas of outstanding natural beauty/i,
+    /\bcaves? of\b/i,
+    /quarries in/i,
+    /woodland/i,
+    /forests? in/i,
+    /moors?\b|moorland/i,
+    /waterfalls?/i,
+    /\bsummits?\b/i,
+    /nature reserves/i
+  ];
+
+  // Some settlement articles (e.g. a town with a "Geology" section) still
+  // pick up a landscape-looking category like "Geology of Shropshire" —
+  // these settlement categories take priority and rule a result out even
+  // if it also matched a landscape pattern above.
+  const SETTLEMENT_CATEGORY_PATTERNS = [
+    /\btowns? (in|of)\b/i,
+    /\bvillages? (in|of)\b/i,
+    /\bhamlets? (in|of)\b/i,
+    /\bcivil parishes?\b/i,
+    /\bsuburbs? (in|of)\b/i,
+    /\bmarket towns?\b/i,
+    /\bspa towns?\b/i,
+    /\bcities (in|of)\b/i,
+    /\brailway stations?\b/i,
+    /\bchurches? (in|of)\b/i,
+    /\bschools? (in|of)\b/i,
+    /\bpubs? (in|of)\b/i,
+    /\bpeople from\b/i,
+    /\bbuildings and structures (in|of)\b/i,
+    /\bcastles? (in|of)\b/i,
+    /\bhouses? (in|of)\b/i
+  ];
+
+  function isLandscapeResult(categories) {
+    const looksLikeSettlement = categories.some((c) => SETTLEMENT_CATEGORY_PATTERNS.some((re) => re.test(c)));
+    if (looksLikeSettlement) return false;
+    return categories.some((c) => LANDSCAPE_CATEGORY_PATTERNS.some((re) => re.test(c)));
+  }
 
   // ---------------------------------------------------------------- tabs
 
@@ -185,7 +245,7 @@
   function openLiveSheet(item) {
     const html = `
       <div class="sheet-title">${item.title}</div>
-      <div class="sheet-meta">Live Wikipedia result &middot; not curated &middot; ${fmtDist(item.dist)}</div>
+      <div class="sheet-meta">Live Wikipedia result &middot; not curated &middot; ${fmtDist(item.dist)}${item.isLandscape ? " &middot; landscape/geology" : ""}</div>
       <p>${item.extract || "No summary available from Wikipedia for this one — open the article to see what it actually is; geosearch results include anything geotagged nearby, not just archaeology."}</p>
       <div class="sheet-links">
         <a class="sheet-link" href="${item.url}" target="_blank" rel="noopener">Open on Wikipedia ↗</a>
@@ -259,68 +319,110 @@
   document.getElementById("locate-btn-other").addEventListener("click", locate);
 
   async function fetchLiveNearby(lat, lon) {
-    const wrap = document.getElementById("live-wrap");
+    const filterEl = document.getElementById("live-filter");
     const listEl = document.getElementById("live-list");
-    wrap.hidden = false;
+    filterEl.hidden = true;
     listEl.innerHTML = `<li class="empty-note">Checking Wikipedia for anything else nearby…</li>`;
     try {
       const url =
         "https://en.wikipedia.org/w/api.php?action=query&list=geosearch" +
-        `&gscoord=${lat}|${lon}&gsradius=10000&gslimit=20&format=json&origin=*`;
+        `&gscoord=${lat}|${lon}&gsradius=10000&gslimit=30&format=json&origin=*`;
       const res = await fetch(url);
       if (!res.ok) throw new Error("network");
       const data = await res.json();
       const results = (data.query && data.query.geosearch) || [];
       if (results.length === 0) {
+        liveResults = [];
         listEl.innerHTML = `<li class="empty-note">Nothing geotagged on Wikipedia within 10 km of here.</li>`;
         return;
       }
-      // fetch short extracts for the closest handful
-      const top = results.slice(0, 12);
-      const titles = top.map((r) => r.title).join("|");
+
+      // One combined call for short extracts + categories, so filtering by
+      // category costs nothing extra over what the list already needed.
+      const titles = results.map((r) => r.title).join("|");
       let extracts = {};
+      let categories = {};
       try {
-        const exUrl =
-          "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exintro=1&explaintext=1&exchars=280" +
+        // cllimit is a *shared* budget across every title in this batch, not
+        // per-title — with a low number like 50, some pages (often later in
+        // the list) come back with zero categories at all. "max" avoids that.
+        const infoUrl =
+          "https://en.wikipedia.org/w/api.php?action=query&prop=extracts%7Ccategories&exintro=1&explaintext=1&exchars=280&cllimit=max" +
           `&titles=${encodeURIComponent(titles)}&format=json&origin=*`;
-        const exRes = await fetch(exUrl);
-        const exData = await exRes.json();
-        const pages = (exData.query && exData.query.pages) || {};
+        const infoRes = await fetch(infoUrl);
+        const infoData = await infoRes.json();
+        const pages = (infoData.query && infoData.query.pages) || {};
         Object.values(pages).forEach((p) => {
           extracts[p.title] = p.extract;
+          categories[p.title] = (p.categories || []).map((c) => c.title.replace(/^Category:/, ""));
         });
       } catch (e) {
-        /* extracts are a nice-to-have, ignore failure */
+        /* extracts/categories are a nice-to-have, ignore failure — everything just falls into "all" */
       }
 
-      listEl.innerHTML = top
-        .map((r) => {
-          const dist = r.dist / 1000;
-          return `<li class="site-card live-card" data-title="${r.title.replace(/"/g, "&quot;")}">
-            <span class="period-dot" style="background:#888"></span>
-            <span class="site-card-body">
-              <span class="site-card-title">${r.title}</span>
-              <div class="site-card-dist">${fmtDist(dist)}</div>
-            </span>
-          </li>`;
-        })
-        .join("");
-
-      listEl.querySelectorAll(".live-card").forEach((card, i) => {
-        const r = top[i];
-        card.addEventListener("click", () => {
-          openLiveSheet({
-            title: r.title,
-            dist: r.dist / 1000,
-            extract: extracts[r.title],
-            url: "https://en.wikipedia.org/wiki/" + encodeURIComponent(r.title.replace(/ /g, "_"))
-          });
-        });
+      liveResults = results.map((r) => {
+        const cats = categories[r.title] || [];
+        return {
+          title: r.title,
+          dist: r.dist / 1000,
+          extract: extracts[r.title],
+          isLandscape: isLandscapeResult(cats),
+          url: "https://en.wikipedia.org/wiki/" + encodeURIComponent(r.title.replace(/ /g, "_"))
+        };
       });
+
+      liveFilter = "all";
+      filterEl.hidden = false;
+      renderLiveList();
     } catch (e) {
+      liveResults = [];
+      filterEl.hidden = true;
       listEl.innerHTML = `<li class="empty-note">Couldn't reach Wikipedia just now (no signal, maybe). The curated list above still works offline.</li>`;
     }
   }
+
+  function liveCardHtml(item) {
+    return `<li class="site-card live-card" data-title="${item.title.replace(/"/g, "&quot;")}">
+      <span class="period-dot" style="background:${item.isLandscape ? "var(--moss)" : "#888"}"></span>
+      <span class="site-card-body">
+        <span class="site-card-title">${item.title}</span>
+        <div class="site-card-dist">${fmtDist(item.dist)}</div>
+      </span>
+    </li>`;
+  }
+
+  function renderLiveList() {
+    const listEl = document.getElementById("live-list");
+    const landscapeResults = liveResults.filter((r) => r.isLandscape);
+    const list = liveFilter === "landscape" ? landscapeResults : liveResults;
+
+    document.querySelectorAll(".live-filter-btn").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.filter === liveFilter);
+      if (btn.dataset.filter === "all") btn.textContent = `All (${liveResults.length})`;
+      if (btn.dataset.filter === "landscape") btn.textContent = `Landscape & geology (${landscapeResults.length})`;
+    });
+
+    if (list.length === 0) {
+      listEl.innerHTML =
+        liveFilter === "landscape"
+          ? `<li class="empty-note">Nothing in this batch was categorised as landscape or geology on Wikipedia — try "All", or somewhere with more open countryside nearby.</li>`
+          : `<li class="empty-note">Nothing geotagged on Wikipedia within 10 km of here.</li>`;
+      return;
+    }
+
+    listEl.innerHTML = list.map(liveCardHtml).join("");
+    listEl.querySelectorAll(".live-card").forEach((card) => {
+      const item = liveResults.find((r) => r.title === card.dataset.title);
+      card.addEventListener("click", () => openLiveSheet(item));
+    });
+  }
+
+  document.querySelectorAll(".live-filter-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      liveFilter = btn.dataset.filter;
+      renderLiveList();
+    });
+  });
 
   // ---------------------------------------------------------------- search
 
