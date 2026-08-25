@@ -555,6 +555,123 @@ const SITES = [
       { label: "National Trust", url: "https://www.nationaltrust.org.uk/visit/worcestershire-herefordshire/herefordshire-countryside/midsummer-hill" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Midsummer_Hill" }
     ]
+  },
+  {
+    id: "leckhampton-hill",
+    name: "Leckhampton Hill Hillfort",
+    period: "Iron Age",
+    dates: "c. 900–100 BC hillfort; barrow burial mound possibly earlier",
+    lat: 51.864155,
+    lon: -2.076921,
+    approx: false,
+    elevation: "330 m, above Cheltenham and Shurdington, on the Cotswold escarpment",
+    summary: "A univallate hillfort on the edge of the Cotswold scarp above Cheltenham, one of a string of forts built along this escarpment between about 900 and 100 BC, thought to have been held by the Dobunni. Unusually for the region, an extremely rare Iron Age round barrow survives inside a square enclosure within the fort.",
+    archaeology: "Excavations in the 1920s and in 1969–70 found the rampart's original bank had stood 2–3 m high behind a ditch nearly 3 m deep and over 4 m wide, faced with a wooden palisade and stone wall and pierced by a substantial gatehouse. A 2008 survey by Gloucestershire County Council Archaeological Services confirmed an Iron Age settlement within the fort, with hut circles, internal enclosures and ditches.",
+    interest: "The hill is better known today for the Devil's Chimney, a slender pinnacle of rock left standing by centuries of quarrying — the Romans took stone from here too, and lime-burning and building-stone extraction continued into the 1920s, cutting straight through parts of the Iron Age earthwork before Cheltenham Town Council bought the hill for public access in 1927–29.",
+    links: [
+      { label: "Friends of Leckhampton Hill", url: "https://www.leckhamptonhill.org.uk/site-description/historical-archaeology/" },
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=4695" }
+    ]
+  },
+  {
+    id: "crickley-hill",
+    name: "Crickley Hill",
+    period: "Neolithic – Iron Age",
+    dates: "Causewayed enclosure c. 3650 BC, destroyed c. 3490–3450 BC; Iron Age hillfort in the 1st millennium BC",
+    lat: 51.843905,
+    lon: -2.10374,
+    approx: false,
+    elevation: "On the Cotswold escarpment near Birdlip, close to Shurdington",
+    summary: "One of the most important prehistoric sites in Britain, occupied on and off for over 4,000 years: an early Neolithic causewayed enclosure (c. 3650 BC), rebuilt as a continuous-ditch defended settlement around 3550 BC, then a later Iron Age hillfort covering nearly 9 hectares and home to around 100 people, followed by Roman and sub-Roman activity.",
+    archaeology: "The Neolithic settlement met a violent end: hundreds of leaf-shaped flint arrowheads, concentrated around its two entrances and its burned palisade line, mark an attack dated to around 3490–3450 BC and known as the 'Battle of Crickley Hill' — among the clearest physical evidence anywhere in Britain that Neolithic communities fought organised, deadly conflicts rather than just isolated raids. The site was excavated nearly every summer from 1969 to 1993, one of the largest and longest continuous excavations in the UK, led by Philip Dixon.",
+    interest: "A late Iron Age burial found nearby at Barrow Wake, the Birdlip Grave, produced one of the finest Celtic mirrors ever found in Britain — see the separate entry for that site, a short walk from here along the scarp.",
+    links: [
+      { label: "National Trust", url: "https://www.nationaltrust.org.uk/visit/gloucestershire-cotswolds/crickley-hill/history-of-crickley-hill" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Crickley_Hill_and_Barrow_Wake" }
+    ]
+  },
+  {
+    id: "belas-knap",
+    name: "Belas Knap Long Barrow",
+    period: "Neolithic",
+    dates: "c. 3000 BC, with burials continuing over succeeding centuries",
+    lat: 51.923,
+    lon: -1.9692,
+    approx: false,
+    elevation: "On Cleeve Hill, above Winchcombe",
+    summary: "A particularly fine and well-preserved Cotswold-Severn long barrow, about 54 m long, 18 m wide and up to 4.3 m high, with a deceptive false entrance at its northern end flanked by two projecting 'horns' — the real burial chambers open instead from its sides.",
+    archaeology: "Excavations in 1863 and 1865 found the remains of at least 31 people in the side chambers, with Romano-British pottery inside one chamber showing it was still accessible — deliberately or otherwise — millennia after it was built. The barrow was restored following excavation, with its drystone walling reconstructed.",
+    interest: "The false entrance is the barrow's best-known trick: an imposing doorway that leads nowhere, apparently built to mislead or deter anyone trying to break in from the front, while the real chambers open unobtrusively from the sides.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Belas_Knap" },
+      { label: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/belas-knap-long-barrow/" }
+    ]
+  },
+  {
+    id: "nottingham-hill-camp",
+    name: "Nottingham Hill Camp",
+    period: "Iron Age",
+    dates: "6th century BC – mid-1st century AD",
+    lat: 51.9844,
+    lon: -2.0167,
+    approx: false,
+    elevation: "On Cleeve Hill, near Gotherington, north of Cheltenham",
+    summary: "One of the largest hillforts in Gloucestershire, a promontory fort of roughly 100 hectares (250 acres) enclosed by a single rampart cut across the neck of a prominent spur of the Cotswold escarpment — a huge area by regional standards, more typical of a tribal gathering or stock-management site than a small defended farmstead.",
+    archaeology: "Aerial photography, field survey and chance finds within the fort have identified a probable round barrow cemetery as well as settlement evidence spanning the Iron Age and Romano-British periods, suggesting the site's huge enclosed area was used and re-used across many centuries rather than in a single phase.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1004864" },
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=4697" }
+    ]
+  },
+  {
+    id: "cleeve-cloud-hillfort",
+    name: "Cleeve Cloud Hillfort",
+    period: "Iron Age",
+    dates: "Iron Age",
+    lat: 51.927654,
+    lon: -2.023367,
+    approx: false,
+    elevation: "On Cleeve Common, the highest point of the Cotswold escarpment, near Southam",
+    summary: "A small multivallate hillfort on Cleeve Cloud, the highest point of the Cotswold scarp at over 300 m, occupying a sloping promontory whose natural western drop supplies one line of defence while concentric double ramparts — up to 9.1 m wide and 2.5 m high — guard the more vulnerable sides.",
+    archaeology: "Cleeve Common carries a wealth of prehistoric earthworks beyond the fort itself, including possible earlier monuments, making this one of the richest single stretches of the Cotswold escarpment for visible archaeology — Nottingham Hill Camp and Belas Knap both lie within a few miles on the same ridge.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1002132" },
+      { label: "Gloucestershire archaeology reassessment (PDF)", url: "https://glosarch.org.uk/wp-content/uploads/2023/11/Cleeve-Cloud-Hillfort-and-The-Ring-for-HE-final.pdf" }
+    ]
+  },
+  {
+    id: "painswick-beacon",
+    name: "Painswick Beacon (Kimsbury Camp)",
+    period: "Iron Age",
+    dates: "c. 400–100 BC, with activity into the Roman period",
+    lat: 51.807382,
+    lon: -2.191405,
+    approx: false,
+    elevation: "Painswick Beacon, above Painswick, on the Cotswold escarpment south of Cheltenham",
+    summary: "An impressively multivallate hillfort of about 3.2 hectares (8 acres), also known as Kimsbury Camp or Castle Godwyn, with up to three concentric banks and ditches defending its southern side — the most imposing rampart sequence of any hillfort in this part of the Cotswolds.",
+    archaeology: "Pottery, coins and other finds recovered from the site span the Iron Age through to the 3rd century AD, showing activity continued well into the Roman period. The interior has been heavily altered since — much of it is now a golf course, and quarrying has removed some of the original earthworks — though the multiple ramparts remain clearly walkable.",
+    interest: "Local tradition holds the fort was reused as an artillery outpost by Royalist forces during the 1643 siege of Gloucester in the Civil War — a reminder that a well-sited Iron Age earthwork can still be useful ground two thousand years after it was built.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kimsbury_hill_fort" },
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1004865" }
+    ]
+  },
+  {
+    id: "birdlip-grave",
+    name: "The Birdlip Grave",
+    period: "Late Iron Age",
+    dates: "c. 100–50 BC",
+    lat: 51.834915,
+    lon: -2.102849,
+    approx: false,
+    elevation: "Barrow Wake, on the scarp edge between Birdlip and Crickley Hill",
+    summary: "A late Iron Age burial group found in 1879 by a quarryman digging for stone at Barrow Wake: three graves in a row, a high-status woman in her thirties buried centrally between two men, accompanied by an exceptional set of grave goods.",
+    archaeology: "The woman was buried with a bronze bowl placed over her face, bronze and silver bracelets, a multi-part amber necklace, a silver-gilt brooch, four bronze rings, and — the find that gave the group its fame — an intricately engraved bronze mirror in the La Tène style, its back covered in 77 individual curvilinear patterns filled with cross-hatching, its handle inlaid with red glass enamel. All the finds are now in the Museum of Gloucester.",
+    interest: "The wealth of the burial has led some to suggest the woman may have been a priestess or the wife of a local chieftain — grand enough that one popular but unproven theory even linked the site to Boudica. Whatever her identity, it's one of the richest known burials of the period anywhere in Britain, sitting on the same escarpment as Crickley Hill and Leckhampton, a reminder this ridge stayed important for thousands of years.",
+    links: [
+      { label: "Wikipedia (Birdlip Mirror)", url: "https://en.wikipedia.org/wiki/Birdlip_Mirror" },
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=7799" }
+    ]
   }
 ];
 
