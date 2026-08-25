@@ -18,6 +18,7 @@
   </div>
   <nav class="tabs" role="tablist">
     <button class="tab-btn active" data-tab="sites" role="tab" aria-selected="true">Sites</button>
+    <button class="tab-btn" data-tab="other" role="tab" aria-selected="false">Other sites</button>
     <button class="tab-btn" data-tab="geology" role="tab" aria-selected="false">Geology</button>
   </nav>
 </header>
@@ -44,10 +45,27 @@
       <ul id="site-list" class="site-list"></ul>
     </div>
 
-    <div id="live-wrap" class="list-wrap live-wrap" hidden>
-      <h2 class="list-heading">Also nearby, via Wikipedia <span class="count-badge live-badge">live · unverified</span></h2>
-      <p class="live-note">Pulled live from Wikipedia's geosearch for wherever you've located — not curated, not necessarily archaeology. Worth a look if you're stood somewhere with nothing in the curated list above.</p>
-      <ul id="live-list" class="site-list live-list"></ul>
+  </section>
+
+  <!-- ========================== OTHER SITES TAB ========================== -->
+  <section id="tab-other" class="tab-panel">
+
+    <div class="geology-intro">
+      <h2>Also nearby, via Wikipedia</h2>
+      <p>Pulled live from Wikipedia's geosearch for wherever you've located — not curated, not necessarily archaeology. Worth a look if you're stood somewhere with nothing in the curated Sites list.</p>
+    </div>
+
+    <div class="controls">
+      <button id="locate-btn-other" class="btn btn-primary">📍 Use my location</button>
+    </div>
+
+    <div id="other-status" class="status-line" hidden></div>
+
+    <div id="live-wrap" class="list-wrap live-wrap">
+      <h2 class="list-heading">Nearby on Wikipedia <span class="count-badge live-badge">live · unverified</span></h2>
+      <ul id="live-list" class="site-list live-list">
+        <li class="empty-note">Tap "Use my location" above to see what's nearby.</li>
+      </ul>
     </div>
 
   </section>

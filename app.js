@@ -142,7 +142,7 @@
     document.getElementById("site-count").textContent = list.length;
 
     if (list.length === 0) {
-      listEl.innerHTML = `<li class="empty-note">Nothing in the curated list matches that. Try a shorter search, or check the live Wikipedia results below once you've located.</li>`;
+      listEl.innerHTML = `<li class="empty-note">Nothing in the curated list matches that. Try a shorter search, or check the "Other sites" tab for live Wikipedia results once you've located.</li>`;
       return;
     }
 
@@ -215,13 +215,16 @@
   // ---------------------------------------------------------------- geolocation + live search
 
   function setStatus(msg, isError) {
-    const el = document.getElementById("status-line");
-    el.hidden = !msg;
-    el.textContent = msg || "";
-    el.style.color = isError ? "var(--primary)" : "";
+    ["status-line", "other-status"].forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.hidden = !msg;
+      el.textContent = msg || "";
+      el.style.color = isError ? "var(--primary)" : "";
+    });
   }
 
-  document.getElementById("locate-btn").addEventListener("click", () => {
+  function locate() {
     if (!("geolocation" in navigator)) {
       setStatus("Your browser doesn't support location. Try the search box instead.", true);
       return;
@@ -230,7 +233,7 @@
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         userLoc = { lat: pos.coords.latitude, lon: pos.coords.longitude };
-        setStatus("Located. Sites below are sorted nearest first.");
+        setStatus("Located. Sites are sorted nearest first.");
         renderSiteList(document.getElementById("search-input").value);
         if (map) {
           map.flyTo([userLoc.lat, userLoc.lon], 11, { duration: 0.6 });
@@ -250,7 +253,10 @@
       },
       { enableHighAccuracy: true, timeout: 12000 }
     );
-  });
+  }
+
+  document.getElementById("locate-btn").addEventListener("click", locate);
+  document.getElementById("locate-btn-other").addEventListener("click", locate);
 
   async function fetchLiveNearby(lat, lon) {
     const wrap = document.getElementById("live-wrap");
