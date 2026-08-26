@@ -22,6 +22,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Old_Oswestry" },
       { label: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/old-oswestry-hillfort/" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/4621/old-oswestry" }
     ]
   },
   {
@@ -39,6 +41,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bury_Ditches" },
       { label: "Council for British Archaeology", url: "https://www.archaeologyuk.org/resource/hike-up-iron-age-hillforts-at-bury-ditches--shropshire.html" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/2081/bury-ditches" }
     ]
   },
   {
@@ -56,6 +60,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Wrekin" },
       { label: "Cornovii (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cornovii_(Midlands)" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/4009/wrekin" }
     ]
   },
   {
@@ -73,6 +79,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Caer_Caradoc" },
       { label: "Historic England listing", url: "https://historicengland.org.uk/listing/the-list/list-entry/1010723" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/5016/caer-caradoc-church-stretton" }
     ]
   },
   {
@@ -89,6 +97,8 @@ const SITES = [
     interest: "Brown Clee is Shropshire's highest hill; Nordy Bank sits on its lower shoulder rather than the summit.",
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nordy_Bank" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/3319/nordy-bank" }
     ]
   },
   {
@@ -106,6 +116,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Titterstone_Clee_Hill" },
       { label: "Atlas of Hillforts", url: "http://hillforts.arch.ox.ac.uk/records/EN0091.html" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/8917/titterstone-clee-hill" }
     ]
   },
   {
@@ -123,6 +135,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Croft_Ambrey" },
       { label: "National Trust", url: "https://www.nationaltrust.org.uk/visit/worcestershire-herefordshire/croft-castle-and-parkland/croft-ambrey-walk-at-croft-castle" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/3317/croft-ambrey" }
     ]
   },
   {
@@ -140,6 +154,8 @@ const SITES = [
     links: [
       { label: "Atlas of Hillforts", url: "https://hillforts.arch.ox.ac.uk/records/WA0071.html" },
       { label: "Coflein", url: "https://coflein.gov.uk/en/sites/92487" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/7001/llanymynech-hill" }
     ]
   },
   {
@@ -157,6 +173,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mitchell%27s_Fold" },
       { label: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/mitchells-fold-stone-circle/" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/139/mitchells-fold" }
     ]
   },
   {
@@ -174,6 +192,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hoarstones" },
       { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=990" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/2309/hoarstones" }
     ]
   },
   {
@@ -190,6 +210,8 @@ const SITES = [
     interest: "Included here deliberately as a reminder that the visible ancient landscape is a survivor's sample: this was a large circle, and it went the way of a field wall within living memory of the Ordnance Survey.",
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Whetstones_(stone_circle)" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/4501/whetstones" }
     ]
   },
   {
@@ -207,6 +229,8 @@ const SITES = [
     links: [
       { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/11715/bromfield-barrow-cemetery" },
       { label: "Cambridge Core (excavation report)", url: "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/abs/bromfield-shropshire-neolithic-beaker-and-bronze-age-sites-196679/6AF95A43B2A065B89A1A55DAC12A4FA9" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/11715/bromfield-barrow-cemetery" }
     ]
   },
   {
@@ -224,6 +248,8 @@ const SITES = [
     links: [
       { label: "National Trust", url: "https://www.nationaltrust.org.uk/visit/shropshire-staffordshire/carding-mill-valley-on-the-long-mynd/bodbury-ring-hillfort-discovered-to-be-six-times-larger-than-originally-thought" },
       { label: "Atlas of Hillforts", url: "http://hillforts.arch.ox.ac.uk/records/EN0043.html" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/7393/bodbury-ring" }
     ]
   },
   {
@@ -240,6 +266,8 @@ const SITES = [
     interest: "A clear, compact example of a fort rebuilt and re-engineered over centuries rather than a single-phase structure — worth comparing against Old Oswestry's more dramatic multi-phase sequence.",
     links: [
       { label: "Atlas of Hillforts", url: "http://hillforts.arch.ox.ac.uk/records/EN0061.html" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/3318/caynham-camp" }
     ]
   },
   {
@@ -257,6 +285,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Burrow_(Shropshire)" },
       { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=10707" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/3316/burrow" }
     ]
   },
   {
@@ -272,6 +302,8 @@ const SITES = [
     archaeology: "A 1930 excavation at the inturned north-east entrance found cart ruts, hearths and building foundations first taken for a medieval structure but now interpreted as a Romano-Celtic temple. Geophysical survey in 1999–2000 revealed concentric terraces inside the northern half of the fort, whose construction spoil appears to have been reused in the defences.",
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bury_Walls" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/14275/bury-walls" }
     ]
   },
   {
@@ -288,6 +320,8 @@ const SITES = [
     interest: "Local legend places the graves of British kings under the pool here — whether or not it's literally true, it's a sign of how long this unusual, waterlogged fort stayed part of the region's folk memory after it went out of use.",
     links: [
       { label: "Atlas of Hillforts", url: "http://hillforts.arch.ox.ac.uk/records/EN0084.html" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/13907/berth" }
     ]
   },
   {
@@ -320,6 +354,8 @@ const SITES = [
     links: [
       { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1021073" },
       { label: "Atlas of Hillforts", url: "http://hillforts.arch.ox.ac.uk/records/EN0074.html" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/4749/norton-camp-shropshire" }
     ]
   },
   {
@@ -337,6 +373,8 @@ const SITES = [
     links: [
       { label: "Atlas of Hillforts", url: "http://hillforts.arch.ox.ac.uk/records/EN0066.html" },
       { label: "Shropshire Wildlife Trust", url: "https://www.shropshirewildlifetrust.org.uk/nature-reserves/earls-and-pontesford-hill" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/8368/earls-hill-and-pontesford-hill" }
     ]
   },
   {
@@ -354,6 +392,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Coxall_Knoll" },
       { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1014107" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/8508/coxall-knoll" }
     ]
   },
   {
@@ -386,6 +426,8 @@ const SITES = [
     archaeology: "Like several of the smaller Clun-area forts nearby (Caer-Din Ring, Bury Ditches) it belongs to the dense cluster of Iron Age hillforts along this stretch of the Marches, though it has seen less formal excavation than its larger neighbours.",
     links: [
       { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=14689" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/19450/wart-hill-camp" }
     ]
   },
   {
@@ -419,6 +461,8 @@ const SITES = [
     links: [
       { label: "CBA Research Report 76", url: "https://archaeologydataservice.ac.uk/archives/view/cba_rr/rr76.cfm" },
       { label: "Antiquaries Journal (Cambridge Core)", url: "https://www.cambridge.org/core/journals/antiquaries-journal/article/abs/is-there-anybody-out-there-a-reconsideration-of-the-environmental-evidence-from-the-breiddin-hillfort-powys-wales/69996A89DD2D0D11ADF1B08F43406C7E" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/4516/breiddin-hill-camp" }
     ]
   },
   {
@@ -436,6 +480,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ffridd_Faldwyn,_Montgomery" },
       { label: "Coflein", url: "https://coflein.gov.uk/en/sites/92480" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/14129/ffridd-faldwyn" }
     ]
   },
   {
@@ -453,6 +499,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Roundton_Hill" },
       { label: "Montgomeryshire Wildlife Trust", url: "https://www.montwt.co.uk/nature-reserves/roundton-hill" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/13849/roundton" }
     ]
   },
   {
@@ -470,6 +518,8 @@ const SITES = [
     links: [
       { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1005526" },
       { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=4744" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/5246/credenhill-camp" }
     ]
   },
   {
@@ -487,6 +537,8 @@ const SITES = [
     links: [
       { label: "Historic England", url: "https://historicengland.org.uk/whats-new/in-your-area/midlands/sutton-walls-hillfort/" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Sutton_Walls_Hill_Fort" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/5245/sutton-walls" }
     ]
   },
   {
@@ -503,6 +555,8 @@ const SITES = [
     links: [
       { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1011017" },
       { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=4753" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/3320/wapley-hill" }
     ]
   },
   {
@@ -520,6 +574,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Burfa_Castle" },
       { label: "Roman Britain", url: "https://www.roman-britain.co.uk/places/burfa_camp/" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/6795/burfa-bank" }
     ]
   },
   {
@@ -537,6 +593,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Herefordshire_Beacon" },
       { label: "Atlas of Hillforts", url: "https://hillforts.arch.ox.ac.uk/records/EN0005.html" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/5203/british-camp" }
     ]
   },
   {
@@ -554,6 +612,8 @@ const SITES = [
     links: [
       { label: "National Trust", url: "https://www.nationaltrust.org.uk/visit/worcestershire-herefordshire/herefordshire-countryside/midsummer-hill" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Midsummer_Hill" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/4058/midsummer-hill" }
     ]
   },
   {
@@ -571,6 +631,8 @@ const SITES = [
     links: [
       { label: "Friends of Leckhampton Hill", url: "https://www.leckhamptonhill.org.uk/site-description/historical-archaeology/" },
       { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=4695" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/11647/leckhampton-hill" }
     ]
   },
   {
@@ -588,6 +650,8 @@ const SITES = [
     links: [
       { label: "National Trust", url: "https://www.nationaltrust.org.uk/visit/gloucestershire-cotswolds/crickley-hill/history-of-crickley-hill" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Crickley_Hill_and_Barrow_Wake" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/56/crickley-hill" }
     ]
   },
   {
@@ -605,6 +669,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Belas_Knap" },
       { label: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/belas-knap-long-barrow/" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/54/belas-knap" }
     ]
   },
   {
@@ -637,6 +703,8 @@ const SITES = [
     links: [
       { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1002132" },
       { label: "Gloucestershire archaeology reassessment (PDF)", url: "https://glosarch.org.uk/wp-content/uploads/2023/11/Cleeve-Cloud-Hillfort-and-The-Ring-for-HE-final.pdf" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/11639/cleeve-cloud" }
     ]
   },
   {
@@ -654,6 +722,8 @@ const SITES = [
     links: [
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kimsbury_hill_fort" },
       { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1004865" }
+    ,
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/5227/painswick-beacon" }
     ]
   },
   {
@@ -671,6 +741,392 @@ const SITES = [
     links: [
       { label: "Wikipedia (Birdlip Mirror)", url: "https://en.wikipedia.org/wiki/Birdlip_Mirror" },
       { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=7799" }
+    ]
+  },
+  {
+    id: "arthurs-stone-herefordshire",
+    name: "Arthur's Stone",
+    period: "Neolithic",
+    dates: "c. 3700–2700 BC",
+    lat: 52.08157,
+    lon: -2.99536,
+    approx: false,
+    elevation: "On a ridge above the Golden Valley, between Dorstone and Bredwardine, Herefordshire",
+    summary: "A Neolithic chambered tomb — really a dolmen, since only its stone skeleton survives — with nine upright stones supporting a capstone estimated at over 25 tonnes. A northern outlier of the Cotswold-Severn tomb group and one of five Neolithic tombs known in the immediate area, it once stood inside a long earthen mound reached by a right-angled entrance passage.",
+    archaeology: "The tomb has never been formally excavated, so what's known comes largely by comparison with similar Cotswold-Severn sites nearby, which have produced incomplete skeletal remains, flint tools, arrowheads and pottery — suggesting Arthur's Stone served both burial and wider ritual purposes over generations.",
+    interest: "Local legend holds the stones mark the spot where King Arthur fought a giant, who fell against one stone and left an indentation still pointed out today — a similar hero-legend pattern to Caer Caradoc's Caratacus story further north in this list.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Arthur%27s_Stone,_Herefordshire" },
+      { label: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/arthurs-stone/" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/99/arthurs-stone" }
+    ]
+  },
+  {
+    id: "four-stones-old-radnor",
+    name: "The Four Stones",
+    period: "Bronze Age",
+    dates: "Late Neolithic – Early Bronze Age",
+    lat: 52.23976,
+    lon: -3.10435,
+    approx: false,
+    elevation: "In the Walton Basin, between Old Radnor and New Radnor, Powys",
+    summary: "Four substantial monoliths, the tallest around 1.8 m, set in a rough square in the Walton Basin — one of the most densely settled parts of Neolithic and Bronze Age Britain. Faint cup marks survive on the south-western stone.",
+    archaeology: "The Walton Basin around the circle contains an exceptional concentration of prehistoric monuments, including the remains of a vast timber palisaded enclosure of some 1,400 oak posts once standing up to 18 feet high — evidence this was a major ritual landscape, not an isolated monument.",
+    interest: "Welsh folklore tells of a battle here in which four kings died, each stone marking a grave; a later tradition has the stones creeping down to Hindwell Pool at night to drink whenever they hear Old Radnor church bells.",
+    links: [
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=349" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/106/four-stones" }
+    ]
+  },
+  {
+    id: "bache-hill-whimble-cairns",
+    name: "Bache Hill & the Whimble Cairns",
+    period: "Bronze Age",
+    dates: "Bronze Age",
+    lat: 52.25536,
+    lon: -3.16481,
+    approx: false,
+    elevation: "Radnor Forest, above New Radnor, Powys",
+    summary: "Six round barrows strung in a curving line from the summit of the Whimble, Radnor Forest's most distinctive conical peak, along the ridge to Bache Hill — most of them intervisible with at least one neighbour. Bache Hill's own summit cairn now carries a trig point.",
+    archaeology: "The barrows sit on or just below the 2,000 ft contour, alongside several ring cairns nearby on Black Mixen — a dense enough concentration of Bronze Age burial monuments on these summits that the whole ridge reads as a deliberately visible funerary landscape.",
+    interest: "A good comparison with the Clee Hills or Corndon Hill cairns further north in this list: another upland ridge in the Marches where a whole string of visible summit monuments, not just one, marks out Bronze Age burial ground.",
+    links: [
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/4247/bache-hill-and-the-whimble" },
+      { label: "Radnor Forest walk guide (Heneb)", url: "https://heneb.org.uk/wp-content/uploads/2025/01/bachehill.pdf" }
+    ]
+  },
+  {
+    id: "pen-y-wyrlod",
+    name: "Pen-y-Wyrlod Long Cairn",
+    period: "Neolithic",
+    dates: "c. 4200–3000 BC",
+    lat: 52.05067,
+    lon: -3.13177,
+    approx: false,
+    elevation: "In the Black Mountains foothills, near Arthur's Stone, Herefordshire/Powys border",
+    summary: "An early Neolithic chambered long cairn, pear-shaped and about 18.5 m long, with a main chamber of four upright stones and a smaller second chamber toward its north-eastern end. Some researchers argue it's among the earliest Neolithic monuments built anywhere in the Black Mountains region.",
+    archaeology: "First excavated in 1920–21, the site was rediscovered in 1972 when its owner began quarrying the mound for building stone — work stopped once human bone and the chambers were exposed, but not before more than half of the southern end had already been removed.",
+    interest: "One of five Neolithic tombs known in the immediate area around Arthur's Stone (see the separate entry) — this stretch of the Golden Valley's edge was clearly a significant early Neolithic landscape, not a single isolated monument.",
+    links: [
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=4080" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/3453/pen-y-wyrlod" }
+    ]
+  },
+  {
+    id: "nesscliffe-hill-camp",
+    name: "Nesscliffe Hill Camp",
+    period: "Iron Age",
+    dates: "From c. 500 BC, with Roman-period reuse",
+    lat: 52.77189,
+    lon: -2.91022,
+    approx: false,
+    elevation: "On a sandstone escarpment above the Severn and Vyrnwy valleys, near Shrewsbury",
+    summary: "A small multivallate hillfort of about 2.8 hectares, built against the sheer sandstone cliffs at the north-western end of Nesscliffe Hill in two conjoined enclosures of apparently different dates. Small multivallate hillforts like this are nationally rare, with only around 100 known examples.",
+    archaeology: "Stone-lined guard chambers still mark the entrance passageway. The first archaeological dig here in 40 years, in 2019, found nationally important evidence of Iron Age furnaces and ironworking tools, plus well-preserved Roman-period deposits showing the site stayed in use long after the Iron Age.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1020285" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/8360/nesscliffe-hill-camp" }
+    ]
+  },
+  {
+    id: "gaer-fawr-welshpool",
+    name: "Gaer Fawr (Welshpool)",
+    period: "Iron Age",
+    dates: "Developed phase c. 400–150 BC",
+    lat: 52.70778,
+    lon: -3.1487,
+    approx: false,
+    elevation: "Above Guilsfield, overlooking the Severn valley near Welshpool, Powys",
+    summary: "A large multivallate hillfort of about 5.8 hectares, hidden in Woodland Trust woodland on a hill north of Guilsfield. Its ramparts are exceptionally well preserved — up to 8 m high, two lines deep on the east and as many as five lines deep on the more vulnerable west side.",
+    archaeology: "The fort grew in at least two phases: an earlier summit enclosure of about 2.7 ha, later extended westward onto a lower terrace to roughly double the interior. Two elaborate entrances at the north-east and south-west lead in, with a smaller third entrance to the west and a separate annexe to the south.",
+    links: [
+      { label: "Coflein", url: "https://coflein.gov.uk/en/site/306997/" },
+      { label: "Woodland Trust", url: "https://www.woodlandtrust.org.uk/visiting-woods/woods/gaer-fawr-wood/" }
+    ]
+  },
+  {
+    id: "beacon-ring",
+    name: "Beacon Ring",
+    period: "Iron Age (with an earlier Bronze Age barrow)",
+    dates: "Middle Iron Age, c. 400–300 BC",
+    lat: 52.64453,
+    lon: -3.08643,
+    approx: false,
+    elevation: "On the summit of Long Mountain (Cefn Digoll), near Welshpool, Powys",
+    summary: "An Iron Age hillfort crowning the highest point of Long Mountain, with a Bronze Age round barrow already standing inside it when the fort was built — a similar pattern to Titterstone Clee, where a Bronze Age cairn predates the Iron Age fort built up around it. A popular stop on the Offa's Dyke Path today.",
+    archaeology: "Excavations in 2017–19 produced a revised plan of the earthworks, examined the entrances, and used auger sampling to trace how the ramparts and ditches were built and later modified — confirming a middle Iron Age construction date, around 400–300 BC.",
+    interest: "Its Welsh name, Caer Digoll, comes from the ridge itself (Cefn Digoll, 'unbroken ridge'); the English name is much younger — a beacon was last lit here in June 1887 for Queen Victoria's Golden Jubilee, continuing a tradition already shown on a 1663 estate map.",
+    links: [
+      { label: "Heneb project page", url: "https://heneb.org.uk/project/beacon-ring/" },
+      { label: "Woodland Trust", url: "https://www.woodlandtrust.org.uk/visiting-woods/woods/beacon-ring/" }
+    ]
+  },
+  {
+    id: "castle-ring-old-radnor",
+    name: "Castle Ring (Old Radnor)",
+    period: "Iron Age (with a later medieval castle)",
+    dates: "Iron Age; a small castle was built within it in the medieval period",
+    lat: 52.26433,
+    lon: -3.07565,
+    approx: false,
+    elevation: "Near Old Radnor, Powys",
+    summary: "A roughly circular Iron Age hillfort about 100 m across, with a stone-and-earth rampart broadening on its eastern side and an entrance to the south-east — later reused as the site of a small medieval castle, whose builders deepened the original ditch to quarry stone for their own walls.",
+    archaeology: "The inner ditch, originally dug simply to supply material for the Iron Age rampart, was deliberately re-cut and deepened in the medieval period — a rare case in this list of a later structure directly cannibalising an earlier one for building material, rather than just reusing the earthwork's footprint.",
+    interest: "Offa's Dyke passes close by, near the foot of Burfa Bank — the same stretch of border already noted at the Burfa Camp entry a few miles south.",
+    links: [
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=6023" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/5240/castle_ring_old_radnor.html" }
+    ]
+  },
+  {
+    id: "kinnerton-court-stones",
+    name: "Kinnerton Court Stones",
+    period: "Bronze Age",
+    dates: "Bronze Age",
+    lat: 52.25682,
+    lon: -3.10624,
+    approx: false,
+    elevation: "Near Walton, in the Walton Basin, Powys",
+    summary: "A pair of standing stones (Kinnerton Court Stone I and II) a few metres apart, within the same densely settled Walton Basin ritual landscape as the Four Stones circle nearby — this stretch of the Marches border was one of the most intensively used parts of prehistoric Britain.",
+    archaeology: "Standing stones and burial mounds are scattered across the whole Walton Basin, alongside the remains of the vast Neolithic timber palisaded enclosure noted at the Four Stones entry — the wider context that makes two isolated-looking stones part of a much bigger picture.",
+    links: [
+      { label: "Megalithic Portal (Stone I)", url: "https://www.megalithic.co.uk/article.php?sid=6391" },
+      { label: "The Modern Antiquarian (Stone I)", url: "https://www.themodernantiquarian.com/site.php/4069/kinnerton_court_stone_i.html" }
+    ]
+  },
+  {
+    id: "devils-ring-and-finger",
+    name: "The Devil's Ring and Finger",
+    period: "Neolithic (possibly Bronze Age)",
+    dates: "Neolithic, possibly Bronze Age",
+    lat: 52.9364,
+    lon: -2.436,
+    approx: false,
+    elevation: "Near Mucklestone, on the Shropshire–Staffordshire border",
+    summary: "Two leaning standing stones at a field boundary near Norton Forge Farm — one grooved, one pierced by a genuinely rare holed opening, only a handful of comparable holed stones being known anywhere in England. Probably Neolithic, though a Bronze Age date can't be ruled out.",
+    archaeology: "Neither stone is thought to be in its original position; their leaning, off-alignment stance against the field wall suggests both have been moved at some point, most likely from a former stone alignment, circle or chambered tomb nearby whose full extent is now lost.",
+    interest: "The holed stone is the real rarity here — most 'ring and finger' folk-names in Britain describe a similar pairing, but genuine prehistoric holed stones like this one are uncommon enough that each survivor matters individually to archaeologists studying the type.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1003495" },
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=4985" }
+    ]
+  },
+  {
+    id: "caer-caradoc-chapel-lawn",
+    name: "Caer Caradoc (Chapel Lawn)",
+    period: "Iron Age",
+    dates: "Iron Age",
+    lat: 52.37546,
+    lon: -3.01517,
+    approx: false,
+    elevation: "On Garn Bank, above Chapel Lawn, near Clun",
+    summary: "The smaller and lesser-known of Shropshire's two hillforts sharing the name Caer Caradoc — this one above Chapel Lawn near Clun, not the more famous fort near Church Stretton already in this list. A fine example of the same nationally rare type as Burrow Camp: a relatively small hillfort with multiple ramparts, a form concentrated mostly in the Marches.",
+    archaeology: "Sits at the eastern end of Garn Bank's summit ridge, within a loop of the River Redlake, with several well-preserved ditches and at least one entrance still legible on the ground.",
+    interest: "Like its larger namesake at Church Stretton, this hill is traditionally linked to Caratacus's last stand against Rome — a reminder that the Caratacus legend attached itself to more than one striking hilltop across the region, not just the best-known one.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Caer_Caradoc_(Chapel_Lawn)" },
+      { label: "Historic England", url: "https://ancientmonuments.uk/119257-caer-caradoc-a-small-multivallate-hillfort-clun" }
+    ]
+  },
+  {
+    id: "stiperstones-cairns",
+    name: "The Stiperstones Cairns",
+    period: "Bronze Age",
+    dates: "Bronze Age",
+    lat: 52.58019,
+    lon: -2.93429,
+    approx: false,
+    elevation: "Along the Stiperstones ridge, near Manstone Rock",
+    summary: "A group of round cairns and a rare tor cairn strung along the Stiperstones ridge, including one perched directly on top of a natural quartzite outcrop near Manstone Rock, Shropshire's second-highest point. Tor cairns are nationally rare, found only where suitable rocky summits exist on high moorland.",
+    archaeology: "The cairns contribute directly to understanding Bronze Age settlement density and land use on this upland — a similar pattern to the barrow cemetery on neighbouring Corndon Hill, suggesting the whole Stiperstones/Corndon upland mattered for burial and ceremony well before it mattered for stone-axe production and mining.",
+    interest: "See the Geology tab for the quartzite tors themselves; this entry is specifically about the Bronze Age monuments built on top of them, distinct from — though inseparable from — the geological story.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1007706" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/9457/stiperstones" }
+    ]
+  },
+  {
+    id: "hetty-peglers-tump",
+    name: "Hetty Pegler's Tump (Uley Long Barrow)",
+    period: "Neolithic",
+    dates: "c. 3300–3200 BC",
+    lat: 51.69783,
+    lon: -2.30533,
+    approx: false,
+    elevation: "On Crawley Hill, above Uley, overlooking the Severn Vale",
+    summary: "One of the best-known Cotswold-Severn long barrows, about 37 m long and up to 3 m high, its entrance marked by two standing stones capped with a lintel leading into a 10 m stone passage with two pairs of side chambers and an end chamber. Named after Hester ('Hetty') Pegler, a 17th-century owner of the field.",
+    archaeology: "Excavated in 1821 and again in 1854, the barrow produced human skeletons and wild boar jawbones in the first dig, then nine human skulls along with animal teeth and tusks in the second — among the richer excavated assemblages of any Cotswold-Severn tomb.",
+    interest: "At roughly 15 miles from Shurdington, this is the furthest-flung entry in the Gloucestershire cluster — but among the most significant long barrows in the county, and worth the extra distance if you're covering the Cotswold long-barrow group properly.",
+    links: [
+      { label: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/uley-long-barrow-hetty-peglers-tump/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Uley_Long_Barrow" }
+    ]
+  },
+  {
+    id: "longstone-minchinhampton",
+    name: "The Longstone of Minchinhampton",
+    period: "Neolithic – Bronze Age",
+    dates: "Late Neolithic – Bronze Age",
+    lat: 51.69721,
+    lon: -2.16641,
+    approx: false,
+    elevation: "On Minchinhampton Common, near Nailsworth",
+    summary: "A single standing stone of oolitic limestone up to 2.1 m high, locally nicknamed the Holey Stone for the large and small holes perforating it — most likely natural weathering rather than deliberate carving, though nobody has proven it either way.",
+    archaeology: "As with most standing stones, no firm excavated date exists — the type ranges from the late Neolithic through the Bronze Age across the handful of comparable examples that have actually been investigated.",
+    interest: "Tradition held that passing a sick child through the stone's holes could cure whooping cough, measles or rickets; another legend has the stone dancing around the field at midnight. Just over a mile from the Bulwarks earthwork on the same Common.",
+    links: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Longstone_of_Minchinhampton" },
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1002130" }
+    ]
+  },
+  {
+    id: "nympsfield-long-barrow",
+    name: "Nympsfield Long Barrow",
+    period: "Neolithic",
+    dates: "c. 2800 BC",
+    lat: 51.71047,
+    lon: -2.29673,
+    approx: false,
+    elevation: "Near Nympsfield, on the Cotswold escarpment, half a mile from Hetty Pegler's Tump",
+    summary: "An oval Neolithic burial mound about 30 m long, one of the earliest local examples of a barrow built with separate internal chambers, its entrance flanked by two standing stones leading into a gallery with two side chambers and an end chamber.",
+    archaeology: "Excavations in 1862, 1937 and 1974 recovered the remains of at least thirteen people, including a child buried in a stone cist, plus Neolithic pottery — some of it found blocking the entrance, suggesting the chamber was deliberately closed before the end of the Neolithic. Finds are held at Gloucester City Museum.",
+    interest: "Close enough to Hetty Pegler's Tump to visit both in one walk — a rare chance to compare two Cotswold-Severn tombs excavated to very different standards, a century apart, within sight of each other.",
+    links: [
+      { label: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/nympsfield-long-barrow/history/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nympsfield_Long_Barrow" }
+    ]
+  },
+  {
+    id: "notgrove-long-barrow",
+    name: "Notgrove Long Barrow",
+    period: "Neolithic",
+    dates: "c. 3800–3500 BC",
+    lat: 51.88878,
+    lon: -1.86049,
+    approx: false,
+    elevation: "Near Notgrove, in the northern Cotswolds",
+    summary: "A well-preserved Cotswold-Severn long barrow, 50 m long and tapering to a point, retained by a low stone wall, with a domed inner chamber and a forecourt flanked by projecting 'horns' probably used for ritual observance rather than burial itself.",
+    archaeology: "Excavated in 1881 and again in 1934–35, the dig found a stone cist with a male skeleton inside the domed chamber and traced an entrance passage from the forecourt. Finds are held at Cheltenham Museum. Between about 3800 and 3500 BC, almost every community across the Cotswold-Severn area built a monument like this one.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1009157" },
+      { label: "Excavation report (Cambridge Core, PDF)", url: "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/93C4371C69B0E5B73DD652EB295A8946/S0261340900015393a.pdf/viinotgrove_long_barrow_gloucestershire.pdf" }
+    ]
+  },
+  {
+    id: "windmill-tump",
+    name: "Windmill Tump (Rodmarton Long Barrow)",
+    period: "Neolithic",
+    dates: "c. 4000–3500 BC",
+    lat: 51.67391,
+    lon: -2.0969,
+    approx: false,
+    elevation: "West of Rodmarton village",
+    summary: "A trapezoidal chambered long barrow, 57 m by 27 m, with a forecourt at its eastern end flanked by two projections and a deliberate false entrance — two standing stones and a lintel that lead nowhere, blocked by a slab — while the real burial chambers open from the sides, the same deceptive design seen at Belas Knap further north.",
+    archaeology: "Partial excavations in 1863, 1939 and 1987 found thirteen complete skeletons and fragments of several more across two internal chambers, plus animal bones. Roman pottery and coins of Claudius Gothicus (AD 268–70) show the site was still being visited, or reused, well over three thousand years after it was built.",
+    links: [
+      { label: "English Heritage", url: "https://www.english-heritage.org.uk/visit/places/windmill-tump-long-barrow-rodmarton/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Windmill_Tump" }
+    ]
+  },
+  {
+    id: "west-tump",
+    name: "West Tump",
+    period: "Neolithic",
+    dates: "Neolithic",
+    lat: 51.81775,
+    lon: -2.12768,
+    approx: false,
+    elevation: "Near Cranham and Birdlip, on a west-facing hillside",
+    summary: "A Cotswold-Severn long barrow about 48 m long and up to 3 m high, its south-eastern end curving slightly inward to form the characteristic 'horns' seen at several other barrows in this list — a design feature repeated widely enough across the group to suggest a shared, deliberate architectural tradition rather than local variation.",
+    archaeology: "Discovered and excavated by G. B. Witts in 1880, the barrow survives well enough to still hold archaeological and environmental evidence of both the monument and the landscape it was built into.",
+    interest: "Only a couple of miles from Crickley Hill and the Birdlip Grave, already in this list — this small stretch of the escarpment edge around Birdlip carries an unusually dense run of prehistoric sites for such a short walk.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1016078" },
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=4709" }
+    ]
+  },
+  {
+    id: "randwick-long-barrow",
+    name: "Randwick Long Barrow",
+    period: "Neolithic",
+    dates: "Roughly 4,500–5,400 years old",
+    lat: 51.76,
+    lon: -2.25359,
+    approx: false,
+    elevation: "On a hilltop above Randwick, near Stroud, within Standish Wood",
+    summary: "A substantial long barrow mound, about 55 m long and still standing 4 m high in places, with the remains of a horned entrance and forecourt at its north-eastern end leading to a single stone-lined chamber. Set deep in atmospheric Cotswold woodland, surrounded by old quarry pits and scrapes from centuries of stone-getting.",
+    archaeology: "An 1883 excavation found the forecourt opening as expected to the north-east, giving access to a simple one-cell chamber containing disarticulated human remains — a much simpler internal plan than the multi-chambered barrows at Nympsfield or Hetty Pegler's Tump nearby.",
+    interest: "A short walk further into the woods turns up more round barrows and a cross-dyke — worth the wander if the long barrow alone isn't enough.",
+    links: [
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=4699" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/4981/randwick_long_barrow.html" }
+    ]
+  },
+  {
+    id: "avening-burial-chambers",
+    name: "Avening Burial Chambers & the Tinglestone",
+    period: "Neolithic",
+    dates: "Neolithic",
+    lat: 51.68912,
+    lon: -2.17072,
+    approx: false,
+    elevation: "In and around the village of Avening, near Nailsworth",
+    summary: "Two related but separate Neolithic monuments in the same village: a set of burial chambers, largely collapsed and now overgrown in a private garden in Lower Avening, and — a short distance away — the Tinglestone, a standing stone atop the wrecked remains of a second chambered long barrow known as Norn's Tump.",
+    archaeology: "The Tinglestone itself is a substantial slab of oolitic limestone, about four feet wide and worn through with holes; the barrow it once stood over was largely destroyed by amateur digging in the early 19th century, a fate several other Cotswold long barrows in this list only narrowly avoided.",
+    interest: "A useful cautionary example alongside Whetstones in Shropshire: two more Neolithic monuments substantially lost to poorly-recorded 19th-century interference rather than to modern development.",
+    links: [
+      { label: "The Modern Antiquarian (Avening)", url: "https://www.themodernantiquarian.com/site/4961/avening-burial-chambers" },
+      { label: "The Modern Antiquarian (Tinglestone)", url: "https://www.themodernantiquarian.com/site/4705/tinglestone" }
+    ]
+  },
+  {
+    id: "haresfield-camp",
+    name: "Haresfield Camp",
+    period: "Late Bronze Age / Iron Age (with Romano-British reuse)",
+    dates: "8th–5th century BC hillfort; Romano-British settlement later",
+    lat: 51.77892,
+    lon: -2.24934,
+    approx: false,
+    elevation: "On Haresfield Hill and Ring Hill, above Haresfield, near Stroud",
+    summary: "A slight univallate hillfort with an unusually large double rampart, spanning the summits of Ring Hill and Haresfield Hill, alongside a Romano-British settlement, a cross-dyke, and a round barrow — Haresfield Beacon — capped today by an unusual stone-built Ordnance Survey trig point.",
+    archaeology: "Dating to the late Bronze Age or early Iron Age (8th–5th centuries BC), most sites of this univallate type were used for only 150–200 years before abandonment or rebuilding — interpreted variously as stock enclosures, redistribution centres, refuges or permanent settlements. Roman-period finds — a quern, pottery, animal bones — were recovered here in 1837.",
+    interest: "The Beacon itself, a genuine round barrow long predating the fort around it, is a good example of the same pattern seen at British Camp and Beacon Ring elsewhere in this list: an older burial monument absorbed into a later defended site rather than being cleared away.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1004861" },
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=4694" }
+    ]
+  },
+  {
+    id: "norbury-camp-coberley",
+    name: "Norbury Camp (Coberley)",
+    period: "Iron Age",
+    dates: "Iron Age",
+    lat: 51.83221,
+    lon: -2.01451,
+    approx: false,
+    elevation: "Near Coberley, in the central Cotswolds",
+    summary: "A slight univallate hillfort with a sub-oval interior of about 3.25 hectares, defended by a single bank-and-ditch rampart that survives best on its southern side, where the bank still stands up to 1.4 m high behind a ditch 7.5 m wide.",
+    archaeology: "As a 'slight univallate' type, it's considered important evidence for the transition between late Bronze Age and Iron Age communities in the region, even though ploughing has worn away the rampart on the north-east and south-west sides.",
+    interest: "Not to be confused with the other Norbury Camps scattered across the Cotswolds — there's at least one more, near Farmington — a reminder that generic hillfort names like 'Norbury' or 'Castle Ring' recur across the region and aren't unique identifiers on their own.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1018167" }
+    ]
+  },
+  {
+    id: "conderton-camp",
+    name: "Conderton Camp",
+    period: "Iron Age",
+    dates: "Late 6th – 4th century BC",
+    lat: 52.05968,
+    lon: -2.06273,
+    approx: false,
+    elevation: "On Bredon Hill, overlooking the River Avon, Worcestershire",
+    summary: "A small promontory hillfort on the south-west shoulder of Bredon Hill, one of three hillforts on this single hill, built between the late 6th and 4th centuries BC and occupied through to the end of the Iron Age — likely starting as a communal meeting and market site before becoming a fortified, permanent settlement.",
+    archaeology: "Excavated by Nicholas Thomas in 1958–59, though the full report wasn't published until 2005, the dig recovered prehistoric and Roman artefacts from trenches across the site, adding detail to the wider picture of Bredon Hill's three interlinked hillforts.",
+    interest: "Bredon Hill's other two hillforts make this a good area to explore multiple related Iron Age sites on one hill, similar to Brown Clee's three forts already in this list.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1005327" },
+      { label: "The Modern Antiquarian", url: "https://themodernantiquarian.com/site/5141/conderton_camp.html" }
     ]
   }
 ];
