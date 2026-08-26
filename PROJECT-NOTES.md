@@ -8,10 +8,15 @@ everything it needs to make a tweak and push it live.
 
 A mobile-first web app with three tabs:
 
-- **Sites** — a curated database of 40 Neolithic/Bronze Age/Iron Age
+- **Sites** — a curated database of 63 Neolithic/Bronze Age/Iron Age
   monuments across Shropshire, the Welsh Marches, and the Cotswold
   escarpment around Shurdington/Cheltenham, Gloucestershire, each with a
-  sourced write-up. Has GPS "use my location" (sorts by distance).
+  sourced write-up. Has GPS "use my location" (sorts by distance). Many
+  entries also link out to [The Modern Antiquarian](https://www.themodernantiquarian.com/)
+  for user photos/fieldnotes/folklore — TMA's own live marker feed
+  (`/json/markers`) was also used as a discovery source to find new sites
+  and cross-match coordinates, but never as a source of prose — every
+  fact is independently verified per the sourcing standard below.
 - **Other sites** — the live Wikipedia geosearch layer for anywhere not in
   the curated list, with an "All" / "Landscape & geology" filter (the
   latter classified from each result's Wikipedia categories) so open
