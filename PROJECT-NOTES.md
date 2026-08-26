@@ -8,7 +8,7 @@ everything it needs to make a tweak and push it live.
 
 A mobile-first web app with three tabs:
 
-- **Sites** — a curated database of 63 Neolithic/Bronze Age/Iron Age
+- **Sites** — a curated database of 70 Neolithic/Bronze Age/Iron Age
   monuments across Shropshire, the Welsh Marches, and the Cotswold
   escarpment around Shurdington/Cheltenham, Gloucestershire, each with a
   sourced write-up. Has GPS "use my location" (sorts by distance). Many
