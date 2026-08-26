@@ -1128,6 +1128,123 @@ const SITES = [
       { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1005327" },
       { label: "The Modern Antiquarian", url: "https://themodernantiquarian.com/site/5141/conderton_camp.html" }
     ]
+  },
+  {
+    id: "beckbury-camp",
+    name: "Beckbury Camp",
+    period: "Iron Age",
+    dates: "Iron Age",
+    lat: 51.96705,
+    lon: -1.90829,
+    approx: false,
+    elevation: "On the Cotswold scarp above Hailes Abbey, east of Winchcombe",
+    summary: "A single-rampart hillfort, roughly rectangular and unusually regular in shape for the region, measuring 170 m by 130 m with ramparts up to 5 m high. The steep west-facing Cotswold scarp defends its north and west sides; a natural hollow-way on the north-west gives the easiest way in.",
+    archaeology: "Fire-reddened stones visible in the north-west boundary wall may hint at burning during the fort's life or abandonment, though this hasn't been formally investigated. A dry-stone field wall was later built directly on top of the southern rampart — one of many small ways later farming has reused these earthworks rather than levelling them.",
+    interest: "A 19th-century monument on the fort's edge, known as 'Cromwell's Seat', marks — according to local tradition rather than any real evidence — where Thomas Cromwell supposedly watched nearby Hailes Abbey burn after its dissolution in 1539.",
+    links: [
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=4701" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/13947/beckbury" }
+    ]
+  },
+  {
+    id: "meon-hill",
+    name: "Meon Hill",
+    period: "Iron Age",
+    dates: "Iron Age",
+    lat: 52.10528,
+    lon: -1.743,
+    approx: false,
+    elevation: "Above Mickleton, Gloucestershire's most northerly village",
+    summary: "A large multivallate hillfort enclosing about 10.4 hectares on a prominent, isolated hill — one of only two large multivallate hillforts known in the wider area, its earthworks closely following the hill's contours with an inner rampart and ditch, an outer ditch, and in places a further counterscarp bank.",
+    archaeology: "A hoard of 394 Iron Age currency bars was found here in 1824, strong evidence of the site's economic importance. Excavation of one of several shallow, saucer-shaped depressions visible on the summit confirmed it as the floor of a hut, part of a wider settlement inside the ramparts.",
+    interest: "Meon Hill's distinctive isolated profile has led to its being suggested as a real-world inspiration for Weathertop in Tolkien's The Lord of the Rings — unverifiable, but a measure of how visually striking the hill still is.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1011372" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/9627/meon-hill" }
+    ]
+  },
+  {
+    id: "condicote-henge",
+    name: "Condicote Henge",
+    period: "Neolithic",
+    dates: "Likely later Neolithic; radiocarbon dates cluster in the 18th century BC (uncalibrated)",
+    lat: 51.95249,
+    lon: -1.77589,
+    approx: false,
+    elevation: "In the village of Condicote, three miles north-west of Stow-on-the-Wold",
+    summary: "A rare Gloucestershire henge — a sub-circular monument defined by two concentric ditches with a bank between them — sitting right in the middle of the village it's named after, surviving partly as a visible earthwork and partly only as cropmarks.",
+    archaeology: "The inner ditch was near-vertical-sided and flat-bottomed, 4.2 m wide and 2.4 m deep. Its fill included pottery (possibly Beaker), animal bone, charcoal and burnt stone, much of it apparently placed deliberately rather than simply discarded — a pattern typical of henge monuments generally, where the ditch fill seems to record ritual activity rather than rubbish.",
+    interest: "Henges are genuinely rare this far into the Cotswolds — this is one of very few known in the county, worth visiting alongside the region's much more numerous long barrows and hillforts precisely because it's a different kind of monument almost entirely.",
+    links: [
+      { label: "Megalithic Portal", url: "https://www.megalithic.co.uk/article.php?sid=22864" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/3252/condicote-henge" }
+    ]
+  },
+  {
+    id: "shenberrow-hill-camp",
+    name: "Shenberrow Hill Camp",
+    period: "Iron Age (with possible earlier Bronze Age activity)",
+    dates: "British Iron Age, c. 700 BC – AD 43; possible Bronze Age origins",
+    lat: 51.99909,
+    lon: -1.88288,
+    approx: false,
+    elevation: "Near Stanton, on the Cotswold escarpment",
+    summary: "A small Iron Age hillfort of about 2.5 acres — smaller than most of the forts that line the western Cotswold edge — set about 300 m from Shenberrow Hill's actual summit. Two banks defend the gentler northern approach, while the steep scarp does the work on the west and south.",
+    archaeology: "Partial excavation in 1935 found dry-stone revetting on the rampart faces, plus Iron Age and Romano-British pottery, iron fragments and part of a rotary quern — evidence of occupation continuing well past the Iron Age itself. Some finds suggest activity here may stretch back into the Bronze Age, before the visible ramparts were built.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1004867" },
+      { label: "British History Online", url: "https://www.british-history.ac.uk/rchme/ancient-glos/plate-39" }
+    ]
+  },
+  {
+    id: "willersey-camp",
+    name: "Willersey Camp & Long Barrow",
+    period: "Neolithic – Iron Age",
+    dates: "Neolithic long barrow; Iron Age hillfort, 6th century BC – mid-1st century AD",
+    lat: 52.04069,
+    lon: -1.8294,
+    approx: false,
+    elevation: "On the Cotswold escarpment above Broadway Brook, straddling the Gloucestershire/Worcestershire border",
+    summary: "A large multivallate hillfort with, unusually, an older Neolithic long barrow surviving inside it — a rectangular mound about 42 m long, 12 m wide and up to 0.7 m high. The Roman road Ryknild Street runs immediately alongside the fort, and the modern county boundary now runs straight through it.",
+    archaeology: "Partial excavation of the long barrow in 1884 found the internal stone walling of previously disturbed chambers, along with human and animal bone, pottery and flint flakes — confirming a genuine Neolithic burial monument long predating the fort later built up around it, the same layered pattern seen at Titterstone Clee and Beacon Ring elsewhere in this list.",
+    interest: "A golf course was later built directly over part of the hillfort, causing what Historic England's own record calls 'considerable damage' — a blunter, more recent version of the quarrying that has damaged several other forts in this list.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1003815" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/7309/willersey-camp" }
+    ]
+  },
+  {
+    id: "burhill-farm",
+    name: "Burhill Fort",
+    period: "Iron Age",
+    dates: "Iron Age",
+    lat: 52.02637,
+    lon: -1.88339,
+    approx: false,
+    elevation: "Above Buckland, near Broadway, on the Cotswold escarpment",
+    summary: "A small hillfort on a spur of the Cotswold escarpment overlooking Buckland and the Severn/Avon valley, enclosing an estimated 3 hectares — though only identified as a hillfort at all in 1960, since the natural scarp does most of the defensive work and very little rampart survives.",
+    archaeology: "Only a short stretch of rampart remains, on the eastern side against the slope of the scarp, marking where the fort's entrance once was. Everywhere else, the steep natural drop has always been the only real defence — a useful example of how much some Marches and Cotswold forts leaned on their landscape rather than on earthwork-building.",
+    links: [
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/14253/burhill-farm" },
+      { label: "Burhill Fort visitor info", url: "https://www.burhillfort.co.uk/Default.aspx?id=722178" }
+    ]
+  },
+  {
+    id: "north-hill-table-hill-malvern",
+    name: "North Hill & Table Hill Barrows",
+    period: "Bronze Age",
+    dates: "Bronze Age",
+    lat: 52.11554,
+    lon: -2.34155,
+    approx: false,
+    elevation: "On the Malvern Hills ridge, north of British Camp",
+    summary: "Bronze Age burial mounds on two summits at the northern end of the Malvern ridge — North Hill, where 18th-century antiquarians recorded a collapsed barrow known locally as the Giant's Grave, and neighbouring Table Hill, where a second, similar mound was also noted.",
+    archaeology: "Flint arrowheads have been recovered from North Hill and nearby End Hill and West Malvern, and in 1849 a soldier stationed nearby found a cremation burial — ashes, a skull and other bone, with a decorated urn — on the south side of a summit cairn on the Worcestershire Beacon a little further along the same ridge.",
+    interest: "Part of the same Malvern ridge as British Camp, already in this list — together they show the ridge mattered across both the Bronze Age (burial) and Iron Age (defended settlement), not just one period.",
+    links: [
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/13215/north-hill-and-table-hill-malvern" },
+      { label: "Archaeology of the Malvern Hills (PDF)", url: "https://www.explorethepast.co.uk/wp-content/uploads/2023/01/Archaeology-of-the-Malvern-Hills.pdf" }
+    ]
   }
 ];
 
