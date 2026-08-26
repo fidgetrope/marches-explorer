@@ -36,6 +36,7 @@
 
   let userLoc = null; // {lat, lon}
   let map, markerLayer;
+  let otherMap, otherMarkerLayer, otherResultsLayer;
   const markerById = {};
   let liveResults = []; // last fetched Wikipedia geosearch results, classified
   let liveFilter = "all"; // "all" | "landscape"
@@ -114,6 +115,9 @@
       if (target === "sites" && map) {
         setTimeout(() => map.invalidateSize(), 50);
       }
+      if (target === "other" && otherMap) {
+        setTimeout(() => otherMap.invalidateSize(), 50);
+      }
     });
   });
 
@@ -136,6 +140,25 @@
     } catch (e) {
       map = null;
       setStatus("Map couldn't load. Site list and search still work offline.", true);
+    }
+  }
+
+  function initOtherMap() {
+    if (typeof L === "undefined") {
+      document.getElementById("other-map").outerHTML =
+        '<div class="map map-fallback">Map couldn\'t load (no connection to the map tiles right now) — the list below still works once you\'re located.</div>';
+      return;
+    }
+    try {
+      otherMap = L.map("other-map", { scrollWheelZoom: false }).setView([52.55, -2.85], 9);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(otherMap);
+      otherMarkerLayer = L.layerGroup().addTo(otherMap); // "you are here" pin — persists across filter toggles
+      otherResultsLayer = L.layerGroup().addTo(otherMap); // live result pins — cleared/rebuilt on each render
+    } catch (e) {
+      otherMap = null;
     }
   }
 
@@ -308,6 +331,30 @@
             })
           }).addTo(markerLayer).bindTooltip("You are here", { permanent: false });
         }
+        if (otherMap) {
+          try {
+            // If "Other sites" was just switched to, its 50ms invalidateSize
+            // (from the tab-click handler) may not have fired yet — the map
+            // container can still measure 0×0. flyTo's multi-frame animation
+            // then throws "Invalid LatLng (NaN, NaN)" from inside its own
+            // requestAnimationFrame loop, asynchronously — outside this
+            // try/catch — and that would otherwise abort the rest of this
+            // callback before fetchLiveNearby ever runs. setView is instant
+            // (no animation loop), sidestepping the whole issue.
+            otherMap.invalidateSize();
+            otherMap.setView([userLoc.lat, userLoc.lon], 11);
+            L.marker([userLoc.lat, userLoc.lon], {
+              icon: L.divIcon({
+                className: "",
+                html: `<div style="width:16px;height:16px;border-radius:50%;background:#e2007a;border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.5)"></div>`,
+                iconSize: [16, 16],
+                iconAnchor: [8, 8]
+              })
+            }).addTo(otherMarkerLayer).bindTooltip("You are here", { permanent: false });
+          } catch (e) {
+            /* map display is a nice-to-have — never let it block the live results fetch below */
+          }
+        }
         fetchLiveNearby(userLoc.lat, userLoc.lon);
       },
       (err) => {
@@ -336,6 +383,7 @@
       if (results.length === 0) {
         liveResults = [];
         listEl.innerHTML = `<li class="empty-note">Nothing geotagged on Wikipedia within 10 km of here.</li>`;
+        if (otherResultsLayer) otherResultsLayer.clearLayers();
         return;
       }
 
@@ -366,6 +414,8 @@
         const cats = categories[r.title] || [];
         return {
           title: r.title,
+          lat: r.lat,
+          lon: r.lon,
           dist: r.dist / 1000,
           extract: extracts[r.title],
           isLandscape: isLandscapeResult(cats),
@@ -379,6 +429,7 @@
     } catch (e) {
       liveResults = [];
       filterEl.hidden = true;
+      if (otherResultsLayer) otherResultsLayer.clearLayers();
       listEl.innerHTML = `<li class="empty-note">Couldn't reach Wikipedia just now (no signal, maybe). The curated list above still works offline.</li>`;
     }
   }
@@ -418,6 +469,26 @@
     listEl.querySelectorAll(".live-card").forEach((card) => {
       const item = liveResults.find((r) => r.title === card.dataset.title);
       card.addEventListener("click", () => openLiveSheet(item));
+    });
+
+    renderOtherMapMarkers(list);
+  }
+
+  function renderOtherMapMarkers(list) {
+    if (!otherResultsLayer) return;
+    otherResultsLayer.clearLayers();
+    list.forEach((item) => {
+      if (typeof item.lat !== "number" || typeof item.lon !== "number") return;
+      const bg = item.isLandscape ? "var(--blue)" : "#888";
+      const icon = L.divIcon({
+        className: "",
+        html: `<div style="width:14px;height:14px;border-radius:50%;background:${bg};border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)"></div>`,
+        iconSize: [14, 14],
+        iconAnchor: [7, 7]
+      });
+      const m = L.marker([item.lat, item.lon], { icon }).addTo(otherResultsLayer);
+      m.bindTooltip(item.title, { direction: "top", offset: [0, -7] });
+      m.on("click", () => openLiveSheet(item));
     });
   }
 
@@ -575,6 +646,7 @@
 
   initMap();
   renderMarkers();
+  initOtherMap();
   renderSiteList("");
   renderGeologyRegions();
   renderTimescale();
