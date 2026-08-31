@@ -1245,6 +1245,119 @@ const SITES = [
       { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/13215/north-hill-and-table-hill-malvern" },
       { label: "Archaeology of the Malvern Hills (PDF)", url: "https://www.explorethepast.co.uk/wp-content/uploads/2023/01/Archaeology-of-the-Malvern-Hills.pdf" }
     ]
+  },
+  {
+    id: "coberley-long-barrow",
+    name: "Coberley Long Barrow",
+    period: "Neolithic",
+    dates: "c. 3800–3500 BC",
+    lat: 51.83849,
+    lon: -2.06387,
+    approx: false,
+    elevation: "Near Coberley village, a short walk from Cowley along the Gloucestershire Way",
+    summary: "A well-preserved Cotswold-Severn long barrow close to Cowley, still substantial enough to make an obvious mound in its field despite being cut through by a lateral excavation trench and disturbed by other digging over the centuries.",
+    archaeology: "It dates from the main phase of long barrow building across the region, roughly 3800–3500 BC. It has neighbours: Crippets long barrow lies a short distance to the south-west, and Lineover long barrow sits on the Wistley Hill ridge nearby — together with the round barrow at St Paul's Epistle, this small stretch of the Churn valley was clearly a significant Neolithic and Bronze Age burial landscape.",
+    interest: "Access is straightforward — an unlocked gate leads to the barrow along the Gloucestershire Way, making this one of the easier Cotswold long barrows to actually visit rather than just view from a footpath.",
+    links: [
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/8441/coberley" }
+    ]
+  },
+  {
+    id: "crippets-long-barrow",
+    name: "Crippets Long Barrow",
+    period: "Neolithic",
+    dates: "Neolithic, likely c. 3800–3500 BC",
+    lat: 51.85375,
+    lon: -2.09584,
+    approx: false,
+    elevation: "Near Dryhill Farm, Badgeworth, close to Cowley and Leckhampton",
+    summary: "A large, well-preserved Neolithic long barrow, about 58 m long and up to 6 m high, oriented east–west — one of the biggest and best-surviving examples in this stretch of the Cotswolds, despite localised disturbance at its eastern end from 18th-century digging.",
+    archaeology: "The antiquarian Samuel Rudder recorded in 1779 that the barrow had already been opened some years before his writing: diggers found a burial chamber 2.1 m by 1.2 m at a depth of nearly 5 m, containing a skeleton and an iron helmet so corroded it fell apart when touched. Two further round barrows lie about 300 m to the south-east, part of the same small cluster of prehistoric burial activity as Coberley and Lineover nearby.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1017040" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/8442/crippets-long-barrow" }
+    ]
+  },
+  {
+    id: "lineover-long-barrow",
+    name: "Lineover Long Barrow",
+    period: "Neolithic",
+    dates: "c. 3800–3500 BC",
+    lat: 51.86458,
+    lon: -2.01162,
+    approx: false,
+    elevation: "On Wistley Hill, within Lineover Wood, above Charlton Kings",
+    summary: "A Neolithic long barrow on the Wistley Hill ridge, inside Lineover Wood — 50 hectares of ancient oak and ash woodland on the Cotswold escarpment overlooking Cheltenham and Charlton Kings, with views across to Cleeve Cloud.",
+    archaeology: "A large excavation trench crosses the back of the mound, evidence of past antiquarian digging rather than a modern, recorded excavation. St Paul's Epistle, a well-preserved round barrow, lies a few fields to the south-east — the same pattern of Neolithic long barrows and later round barrows sharing a stretch of high ground seen throughout this list.",
+    interest: "The Cotswold Way runs close by, so this is an easy add-on to a walk that already passes nearby — though the setting is shared with the busy A436 running right alongside the field.",
+    links: [
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/4681/lineover" },
+      { label: "Woodland Trust", url: "https://www.woodlandtrust.org.uk/visiting-woods/woods/lineover-wood/" }
+    ]
+  },
+  {
+    id: "st-pauls-epistle",
+    name: "St Paul's Epistle",
+    period: "Bronze Age",
+    dates: "Bronze Age",
+    lat: 51.86098,
+    lon: -1.9971,
+    approx: false,
+    elevation: "On Cleeve Hill/Cleeve Common, above Southam",
+    summary: "A round barrow, tree-topped and prominent, easily seen from the minor road alongside it — one of the best-preserved round barrows along the whole western edge of the Cotswolds, with wide views over the Coln Valley.",
+    archaeology: "Round barrows and other mounds are recorded in this parish as far back as an 8th-century Anglo-Saxon boundary charter for Cleeve, showing the earthworks were already old, named landmarks over a thousand years ago. Other round barrows once recorded on Cleeve Hill in the 19th century had already vanished by 1964 — a reminder of how much has been lost even within living record.",
+    interest: "Its odd name has no confirmed origin — one of several oddly-named barrows in the Cotswolds (compare Robin Hood's Butts and Windmill Tump elsewhere in this list) where the story behind the name has simply been lost.",
+    links: [
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/11649/st-pauls-epistle" }
+    ]
+  },
+  {
+    id: "wood-farm-barrow",
+    name: "Wood Farm Barrow",
+    period: "Bronze Age",
+    dates: "Bronze Age",
+    lat: 51.89245,
+    lon: -2.01453,
+    approx: false,
+    elevation: "Near Cleeve Hill and Southam, on the Cotswold Way",
+    summary: "A round barrow, also known as the Northfield Round Barrow or Ham Hill barrow, visible from the Cotswold Way as it crosses a ploughed field near Battledown. Considerably reduced by ploughing, it's a useful reminder of how many Cotswold barrows survive only as low, damaged mounds rather than the well-preserved examples elsewhere in this list.",
+    archaeology: "Reachable from three directions along the Cotswold Way — from Battledown to the west, from Cleeve Hill to the north, or from Dowdeswell/Ham Farm to the south — though the barrow itself sits on private land within a working arable field.",
+    links: [
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/11648/wood-farm" }
+    ]
+  },
+  {
+    id: "the-camp-long-barrow",
+    name: "The Camp Long Barrow",
+    period: "Neolithic",
+    dates: "Neolithic",
+    lat: 51.77909,
+    lon: -2.12612,
+    approx: false,
+    elevation: "Beside the B4070, at the hamlet of The Camp, near Miserden",
+    summary: "A long barrow of about 50 m, standing up to 3 m high, in a small triangular field right beside the road — actually two monuments in one: a northern long barrow with a stone chamber, and a separate, much-ruined round barrow at its southern end, the two now badly cut into by old excavation craters.",
+    archaeology: "Three upright megaliths, some sinking back into the ground, still mark the chamber at the northern end, their surfaces clearly showing sedimentary rock layering. Heavy 19th/20th-century excavation has left deep craters that nearly separate the long barrow from the round barrow beside it, but enough survives — stones, lichen and all — to give a real sense of the original monument.",
+    interest: "One of the more accessible sites in this list: right beside the B4070, with the hamlet of The Camp taking its name directly from the earthwork.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1002128" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/4644/camp.html" }
+    ]
+  },
+  {
+    id: "hoar-stone-duntisbourne-abbots",
+    name: "The Hoar Stone (Duntisbourne Abbots)",
+    period: "Neolithic",
+    dates: "Neolithic",
+    lat: 51.7576,
+    lon: -2.05071,
+    approx: false,
+    elevation: "In the Duntisbourne valley, near Daglingworth, close to Cirencester",
+    summary: "A long barrow about 48 m long, named for the huge slab of stone set into its eastern end — the Hoar Stone itself, around 3.7 m high and weighing five to six tonnes, among the largest single stones associated with any long barrow in this list.",
+    archaeology: "A large kite-shaped capstone south of the mound's centre covers a burial chamber, excavated in 1806 by Anthony Preston, who found it divided into two compartments containing the remains of eight or nine people. Despite erosion from centuries of cultivation, the barrow still holds archaeological and environmental evidence of Neolithic beliefs, economy and environment.",
+    links: [
+      { label: "Historic England", url: "https://historicengland.org.uk/listing/the-list/list-entry/1018161" },
+      { label: "The Modern Antiquarian", url: "https://www.themodernantiquarian.com/site/4897/hoar-stone-duntisbourne-abbots" }
+    ]
   }
 ];
 
